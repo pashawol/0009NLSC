@@ -6,15 +6,17 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sLogos/_sLogos.pug
 
 block variables
-	- let  mainPage= 'main-page'
+	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Команда Слёта'
 	title= title
-block pagecontent
+block pagecontent 
 	+top-nav()
+	+b.page-head.container
+		h1= title
+
 	+headerBlock()
 	+sForm()
-	+sContact()
 	+sLogos
 	+footer()
 

@@ -1,8 +1,8 @@
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".nav-wrap"),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".nav-wrap ul li a")),
 
 	modalCall() {
 
@@ -63,7 +63,7 @@ const JSCCommon = {
 				element.addEventListener('click', () => {
 					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
 					this.menuMobile.classList.toggle("active");
-					document.body.classList.toggle("fixed");
+					// document.body.classList.toggle("fixed");
 					return false;
 				});
 			});
@@ -76,19 +76,19 @@ const JSCCommon = {
 				element.classList.remove("on");
 			});
 			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
+			// document.body.classList.remove("fixed");
 		}
 
 	},
 	mobileMenu() {
 		if (this.menuMobileLink) {
 			this.toggleMenu();
-			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					this.closeMenu();
-				}
-			}, { passive: true });
+			// document.addEventListener('mouseup', (event) => {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		this.closeMenu();
+			// 	}
+			// }, { passive: true });
 
 			window.addEventListener('resize', () => {
 				if (window.matchMedia("(min-width: 992px)").matches) {
@@ -119,13 +119,13 @@ const JSCCommon = {
 				} 
 			})
 		})
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+		// 	$(this)
+		// 		.addClass('active').siblings().removeClass('active')
+		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+		// 		.eq($(this).index()).fadeIn().addClass('active');
 
-		});
+		// });
 
 	},
 	// /табы
@@ -236,7 +236,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '04.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}

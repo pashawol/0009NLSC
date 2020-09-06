@@ -11,7 +11,12 @@
 	--sPT: #{rem(80 / 2)};
 	--sPB: #{rem(90 / 2)};
 	--sTPB: #{rem(40 / 2)};
-
+@include media-breakpoint-up(md) {
+	--topSpacing: #{ rem(20)};
+}
+--topSpacing: #{ rem(10)};
+--angle: 16deg;
+// --topSpacing: #{ rem(30)};
 
 		--swiperArrowSize: #{rem(68)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);

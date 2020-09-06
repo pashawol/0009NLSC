@@ -1,0 +1,16 @@
+mixin sLogos()
+	// start sLogos
+	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+		.container 
+			.row
+				mixin item(i)
+					+e.col.col-lg-auto.col-4
+						//- (class="wow  animate__fadeInUp "   )
+						noscript(class="loading-lazy")
+							img.lazy(src=`img/svg/logo-${i}` loading="lazy", alt="")
+				+item('1.png')
+				+item('2.svg')
+				+item('3.png')
+				+item('4.svg')
+				+item('5.svg')
+	// end sLogos

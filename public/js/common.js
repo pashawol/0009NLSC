@@ -9,8 +9,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".nav-wrap"),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".nav-wrap ul li a")),
 	modalCall: function modalCall() {
 		$(".link-modal").fancybox({
 			arrows: false,
@@ -73,9 +73,9 @@ var JSCCommon = {
 						return element.classList.toggle("on");
 					});
 
-					_this.menuMobile.classList.toggle("active");
+					_this.menuMobile.classList.toggle("active"); // document.body.classList.toggle("fixed");
 
-					document.body.classList.toggle("fixed");
+
 					return false;
 				});
 			});
@@ -86,24 +86,18 @@ var JSCCommon = {
 			this.btnToggleMenuMobile.forEach(function (element) {
 				element.classList.remove("on");
 			});
-			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
+			this.menuMobile.classList.remove("active"); // document.body.classList.remove("fixed");
 		}
 	},
 	mobileMenu: function mobileMenu() {
-		var _this2 = this;
-
 		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
+			this.toggleMenu(); // document.addEventListener('mouseup', (event) => {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		this.closeMenu();
+			// 	}
+			// }, { passive: true });
 
-				if (!container) {
-					_this2.closeMenu();
-				}
-			}, {
-				passive: true
-			});
 			window.addEventListener('resize', function () {
 				if (window.matchMedia("(min-width: 992px)").matches) {
 					JSCCommon.closeMenu();
@@ -224,6 +218,11 @@ var JSCCommon = {
 			}, 1100);
 			return false;
 		});
+	},
+	getCurrentYear: function getCurrentYear(el) {
+		var now = new Date();
+		var currentYear = document.querySelector(el);
+		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 };
 var $ = jQuery;
@@ -243,7 +242,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '04.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

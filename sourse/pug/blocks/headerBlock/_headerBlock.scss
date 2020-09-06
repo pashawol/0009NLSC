@@ -1,11 +1,8 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
+	min-height: 1280px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(238, 177, 37, 1) 50%, rgba(238, 177, 37, 1) 100%);
 	h1 {
 		margin-bottom: 1px;
 	}

@@ -23,7 +23,11 @@ html {
 	// @include font-size(1rem);
 }
 
-
+h1,
+h2{
+	font-weight: bold;
+	text-transform: uppercase;
+}
 .section {
 	@include bgs; 
 	padding-top: var(--sPT);
@@ -411,4 +415,18 @@ img.img-bg,
 iframe {
 	border: none;
 }
- 
+
+.btn{
+	position: relative;
+	transform: skewX(calc(-1 * var(--angle)));
+	font-weight: bold;
+	> span{ 
+		position: relative;
+		display: block;
+		transform: skewX(calc(var(--angle)));
+	}
+}
+
+.page-head{
+	padding-top: rem(38);
+}
