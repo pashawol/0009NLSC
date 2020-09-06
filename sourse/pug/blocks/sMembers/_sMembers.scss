@@ -1,32 +1,113 @@
-
 	// start .sMembers
-	.sNews,
-	.sMembers {
-		padding-bottom: var(--sPB);
-		padding-top: rem(60);
-		@include media-breakpoint-up(xl) {
+.sNews,
+.sMembers {
+	padding-bottom: var(--sPB);
+	padding-top: rem(63);
+	@include media-breakpoint-up(xl) {
+		.row{
+			@include roww(40px);
+		}
+	}
 
-			.row{
-				@include roww(40px);
+	&__col{
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			// left: 0;
+			// top: 0;
+			z-index: -1;
+		}
+	}
+
+	&__col:nth-child(6n + 1),
+	&__col:nth-child(6n + 6) {
+		@include media-breakpoint-up(lg) {
+			&::before{
+				content: url(../img/svg/z-1.svg);
+				left: rem(144);
+				top: rem(26);
 			}
 		}
+		@include media-breakpoint-up(md) {
+			&::before{
+				content: url(../img/svg/z-1.svg);
+				left: rem(55);
+				top: rem(7);
+			}
+		}
+		&::before{
+			content: url(../img/svg/z-1.svg);
+			left: rem(77);
+    	top: rem(20);
+		}
+	}
+	
+	&__col:nth-child(6n + 2),
+	&__col:nth-child(6n + 5) {
+		@include media-breakpoint-up(lg) {
+			&::before{
+				content: url(../img/svg/z-2.svg);
+				right: rem(29);
+				top: rem(-16);
+			}
+		}
+		&::before{
+			content: url(../img/svg/z-2.svg);
+			right: rem(-28);
+			top: rem(-12);
+		}
+		
+	}
+	&__col:nth-child(6n + 3),
+	&__col:nth-child(6n + 4) {
+		@include media-breakpoint-up(lg) {
+			&::before{
+				content: url(../img/svg/z-1.svg);
+				left: rem(35);
+				top: rem(22);
+			}
+		}
+		@include media-breakpoint-up(md) {
+			&::before{
+				content: url(../img/svg/z-1.svg);
+				left: rem(-29);
+				top: 7px;
+			}
+		}
+		&::before{
+			content: url(../img/svg/z-1.svg);
+			left: rem(-23);
+    	top: rem(21);
+		}
+	}
+
+	
  
 	&__item{
-		margin-bottom: rem(70);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(72);
+		}
+		margin-bottom: rem(60);
+
 		display: block;
-			color: $body-color !important;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: rem(226);
+		color: $body-color !important;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(226);
 	}
 
 	&__img-wrap{
 		@include block(226, 202);
-		margin-bottom: rem(20); 
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(30);
 		overflow: hidden; 
 		position: relative;
 		--angle: 7.5deg;
 		transform: skewX(calc(-1 * var(--angle)));
+		z-index: 2;
 		picture{
 			overflow: hidden;
 			transform: skewX(calc(var(--angle)));
@@ -43,27 +124,28 @@
 	}
  
 	&__title{
-		font-weight: 900;
-		text-transform: uppercase;
-		max-width: 200px;
-		line-height: (20 / 16);
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: (28 / 20);
+		// max-width: 200px;
 		margin-bottom: rem(12);
+		margin-left: rem(33);
 		a{
-
 			color: $body-color ;
 		}
 	}
+
 	&__text{
-		opacity: 0.5;
 		font-size: $small;
-		line-height: 140%;
-		max-width: 200px;
-		margin-bottom: rem(8);
+		line-height: (20 / 14);
+		margin-left: rem(33);
+		// max-width: 200px;
+		// margin-bottom: rem(8);
 	}
+
+
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {
-	  
-	}
+	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	
