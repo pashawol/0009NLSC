@@ -4,6 +4,7 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sMembers/_sMembers.pug
 
 block variables
 	- let  mainPage= null
@@ -15,8 +16,7 @@ block pagecontent
 	+b.page-head.container
 		h1= title
 
-	+headerBlock()
-	+sForm()
+	+sMembers
 	+sLogos
 	+footer()
 

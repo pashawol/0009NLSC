@@ -417,8 +417,8 @@ iframe {
 }
 
 .btn{
-	position: relative;
 	transform: skewX(calc(-1 * var(--angle)));
+	position: relative;
 	font-weight: bold;
 	> span{ 
 		position: relative;
@@ -426,6 +426,7 @@ iframe {
 		transform: skewX(calc(var(--angle)));
 	}
 }
+
 
 .page-head{
 	padding-top: rem(38);
