@@ -59,6 +59,7 @@ $dark: #000 !default;
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
   "secondary": $secondary,
+  "white": $white,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -303,7 +304,7 @@ $headings-margin-bottom: $spacer / 2 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
+$headings-line-height: 1.1 !default;
 $headings-color: null !default;
 
 // scss-docs-start display-headings

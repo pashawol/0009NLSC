@@ -2,9 +2,30 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+			+e.block
+				//- +pic('head-img.png')(class="")
+				img.img( src="img/@2x/head-img.png", alt="")
+				+e.date 21-27 сентября&nbsp;г. Казань
+				h1 Всероссийский Слёт Национальной лиги студенческих клубов
+				p Слёт НЛСК является площадкой для укрепления горизонтальных связей между студенческими клубами. 
+				.row
+					.col-auto
+						+e.link(href="#") #НЛСК    
+					.col-auto
+						+e.link(href="#") #СлетНЛСК    
+					.col-auto
+						+e.link(href="#") #ONRUSSIA
+			+e.row.row
+				.col-md-6
+					+e.inner
+						img.res-i(src="img/svg/team.svg" loading="lazy", alt="")
+						.h1.strong.ttu Участники
+				.col-md-6
+					+e.footer
+						+e.number 700
+						+e.number-text человек со всей России - #[span.text-primary.ttu студенты]
+						ul
+							li лидеры и&nbsp;представители студенческих клубов и&nbsp;объединений
 
-			.row
-						
+							li авторы и&nbsp;руководители социальных проектов, реализующихся на&nbsp;территории России
 	// end headerBlock

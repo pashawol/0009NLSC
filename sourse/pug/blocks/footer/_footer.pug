@@ -2,30 +2,19 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				.col 
-					+e.text &copy;&nbsp;2020. Международный молодежный образовательный форум &laquo;Евразия Global&raquo;
-				.col-auto.order-sm-0.order-last
+				+e.col.col.h6
+					a(href="#")  ДЛЯ СМИ
+					br
+					br
+					a(href="#") КОМАНДА СЛЁТА 
+				+e.col.col-auto
 					+soc()
-				//- .w-100
-				//- .col 
-				//- 	ul
-				//- 		li: a(href="#") Новости
-				//- 		li: a(href="#") О форуме
-				//- 		li: a(href="#") Участникам
-				//- 		li: a(href="#") Для СМИ
-
-				//- 		li: a(href="#") Команда форума
-				//- 		li: a(href="#") Задать вопрос
-				//- .col-sm-auto.text-sm-right
-				//- 	+e.link(href="#") Политика конфиденциальности
-				//- 	br
-				//- 	+e.link(href="#") Пользовательское соглашение
-				//- 	br
-					//- +btnLink('Регистрация')
-		+e.footer
-			.container
-				.row
-					+e.col.col
-						+e.text г.Оренбург ул. Девятого января 64
-					+e.col.col-sm-auto
-						+e.tel(href="tel:+7(3532)78-60-21") +7 (3532) 78-60-21
+				.w-100  
+				+e.col.col-lg-auto.col-sm.smallest.order-sm-0.order-last  © Всероссийский Слёт Национальной лиги студенческих клубов
+				+e.col.col-lg.col-sm-auto.text-sm-center
+					a.small(href="#").strong nlsk@fadm.gov.ru
+				+e.col.col-sm-auto.text-sm-right.small
+					a(href="#") Политика конфиденциальности
+					br
+					a(href="#") Пользовательское соглашение
+					

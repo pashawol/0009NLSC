@@ -1,27 +1,41 @@
 .main-page {
 	.toggle-menu-mobile {
-		 
-		color: #fff;
+		  @include media-breakpoint-up(lg){
+
+				color: $primary;
+			}
+			color: #fff;
 }
 }
 .main-page .top-nav{
 	left: 0;
 	width: 100%;
 	top: 0;
-	// position: absolute;
+	position: absolute;
 
 	 &__user { 
 		 color: #ffffff;
 	 }
 	 .navMenu { 
 	 	&__link {
-			 @include media-breakpoint-up(sm) {
+			 display: inline-block;
+			 @include media-breakpoint-up(lg) {
+					&:hover,
+					&.active{
 
-				 color: #ffffff;
+						color: #ffffff;
+					}
 				}
 		 }}
 	&__logo { 
-		 
+		@include media-breakpoint-up(xl) {
+		 img{  
+			 width: rem(145);
+			 margin-top: rem(-70);
+			 position: relative;
+			 top: rem(105);
+		 }
+		 }
 		}
 		&__user { 
 			color: #ffffff; 
@@ -29,6 +43,10 @@
 				color: $primary !important;
 			} 
 		}
+		&__btn{
+			@extend .btn-white;
+		}
+
 }
 .top-nav {
 		 
@@ -170,7 +188,9 @@
 		}
 		@include media-breakpoint-up(lg) {
 			justify-content: start;
+			padding-right: 0;
 		}
+		padding-right: 20px;
 		justify-content: flex-end;
 		@include roww(rem(20));
 	align-items: center;

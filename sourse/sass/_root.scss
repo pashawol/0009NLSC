@@ -3,17 +3,19 @@
 	--fontSizeBase: #{$em-base};
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
+		// --sPT: #{rem(50)};
+		// --sPB: #{rem(90)};
 		--sTPB: #{rem(40)};
 	}
 
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
-@include media-breakpoint-up(md) {
-	--topSpacing: #{ rem(20)};
-}
+	--sTPB: #{rem(20)};
+	@include media-breakpoint-up(md) {
+		--topSpacing: #{ rem(20)};
+		--sPT: #{rem(50)};
+		--sPB: #{rem(50)};
+	}
+	--sPT: #{rem(50 / 2)};
+	--sPB: #{rem(50 / 2)};
 --topSpacing: #{ rem(10)};
 --angle: 16deg;
 // --topSpacing: #{ rem(30)};

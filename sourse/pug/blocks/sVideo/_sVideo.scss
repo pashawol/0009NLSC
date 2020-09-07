@@ -1,0 +1,41 @@
+
+	// start .sVideo
+	.sVideo {
+		&__wrap{ 
+			max-width: rem(831);
+		}
+		&__video {
+			@include block(831,554);
+			@include mt;
+			margin-bottom: rem(40);
+			&:hover{
+				&::after{
+					opacity: 0.8;
+				}
+		 	}
+			&::after {
+				content: '';
+				@include a-cent;
+				@include mt;
+				content: url(../img/svg/play.svg);
+				margin-top: rem(4);
+				margin-left: rem(2);
+			}
+	}
+	&__caption{
+		@include rfs(27px);
+		opacity: 0.5;
+		line-height: 110%;
+		font-weight: bold;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sVideo

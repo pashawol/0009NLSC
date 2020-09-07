@@ -4,6 +4,14 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sCorporation/_sCorporation.pug
+include ../blocks/sCompetencies/_sCompetencies.pug
+include ../blocks/sTalkom/_sTalkom.pug
+include ../blocks/sGrant/_sGrant.pug
+include ../blocks/sOnRussia/_sOnRussia.pug
+include ../blocks/sItems/_sItems.pug
 
 block variables
 	- let  mainPage= 'main-page'
@@ -13,8 +21,14 @@ block title
 block pagecontent
 	+top-nav()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sVideo
+	+sProgram
+	+sItems
+	+sCorporation
+	+sCompetencies
+	+sTalkom
+	+sGrant
+	+sOnRussia
 	+sLogos
 	+footer()
 
