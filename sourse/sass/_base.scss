@@ -430,4 +430,68 @@ iframe {
 
 .page-head{
 	padding-top: rem(38);
+
+	&__container{
+		position: relative;
+		@include media-breakpoint-up(lg){
+
+			padding-left: 155px;
+			padding-right: 155px;
+		}
+		// text-align: center;
+		
+	}
+	&__back{
+			@include media-breakpoint-up(lg) {
+
+				position: absolute;
+				left: 15px;
+				top: rem(15);
+				margin-top: 0;
+			}
+			margin-top: 10px;
+			margin-bottom: rem(20);
+		// .icon{
+		// 	color: $primary;
+		// 	margin-right: rem(10);
+		// 	font-size: rem(12);
+		// }
+	}
+
+
+
+
+
+
+
+
+
+	// &__container{
+	// 	// position: relative;
+	// 	@include media-breakpoint-up(lg){
+	// 		padding-left: 155px;
+	// 		padding-right: 155px;
+	// 	}
+	// 	// display: flex;
+	// }
+
+	// &__back{
+	// 	@include media-breakpoint-up(xl) {
+	// 	}
+	// 	// display: flex;
+	// 	margin-right: 165px;
+	// 	// flex-wrap: wrap;
+	// 	// margin-right: 150px;
+	// 	padding-top: 8px;
+	// }
+
+	h1{
+		@include media-breakpoint-up(lg) {
+			max-width: 826px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 45px;
+			padding-right: 45px;
+		}
+	}
 }
