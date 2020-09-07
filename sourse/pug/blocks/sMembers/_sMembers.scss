@@ -1,5 +1,4 @@
 	// start .sMembers
-.sNews,
 .sMembers {
 	padding-bottom: var(--sPB);
 	padding-top: rem(63);
@@ -14,8 +13,6 @@
 		&::before{
 			content: '';
 			position: absolute;
-			// left: 0;
-			// top: 0;
 			z-index: -1;
 		}
 	}
