@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sNewsDetails/_sNewsDetails.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Молодёжь Волгоградской области погрузилась в тему студенческих клубов'
+	title= title
+block pagecontent 
+	+top-nav()
+	+b.page-head
+		+e.container.container 
+				h1= title
+				+e.back(href="#") 
+					img(src="img/svg/arrow-back.svg", alt="")
+
+	+sNewsDetails()
+	+footer()
+
+
+	

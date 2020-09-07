@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sNewsDetails/_sNewsDetails.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Правила работы представителей СМИ на Всероссийском слете Национальной лиги студенческих клубов в 2020 году'
+	title= title
+block pagecontent 
+	+top-nav()
+	+b.page-head
+		.container 
+				h1= title
+	.container
+		.row.main-row
+			.col
+				+sNewsDetails2()
+			.col-lg-auto
+				+b.sidebar.section
+					+e.block При <br> 	нахождении на&nbsp;территории 	Слета необходимо	соблюдать #[a(href="#") профилактические меры]
+					ul
+						li Без аккредитации вход на&nbsp;территорию Слета запрещен.
+						li Заполнение данной заявки необходимо осуществить не&nbsp;позднее чем за&nbsp;72 часа до&nbsp;прибытия на&nbsp;Слет.
+						li Для получения аккредитации журналистам необходимо обладать удостоверением журналиста и&nbsp;находиться в&nbsp;штате зарегистрированного при Роскомнадзоре СМИ.
+	+footer()
+
+
+	
