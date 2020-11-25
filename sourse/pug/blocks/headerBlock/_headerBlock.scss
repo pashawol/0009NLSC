@@ -8,7 +8,7 @@
 	.container{
 		z-index: 2;
 		 @include media-breakpoint-up(lg) {
-			 padding-top: rem(262);
+			//  padding-top: rem(202);
 			}
 			padding-top: rem(132);
 		position: relative;
@@ -31,7 +31,7 @@
 			--size: 300vw; 
 			width: var(--size);
 			height: var(--size);
-			background-color: $warning;
+			background-color: var(--accentColor);
 			transform: rotate(-34deg);
 			// transform: skewX(34deg);
 			transform-origin: right bottom;
@@ -64,6 +64,7 @@
 		 img{
 			 position: absolute;
 			 width: rem(807); 
+			 z-index: -1;
 			 @include media-breakpoint-down(lg) {display: none;}
 			 @include media-breakpoint-up(xl) {
 
@@ -71,7 +72,7 @@
 				}
 				left: calc(100% - #{rem(215)});
 			 
-			 top: rem(-310);
+			 top: rem(-210);
 		 }
 		 	@include media-breakpoint-up(lg) {
 

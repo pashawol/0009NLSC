@@ -520,3 +520,22 @@ iframe {
 		}
 	} 
 }
+.btn{
+	box-shadow: none !important;
+}
+.btn-warning {
+	background-color: var(--accentColor);
+	border-color:var(--accentColor);
+	color: var(--btnColor)  ;
+	&:active,
+	&:focus{
+		color: var(--btnColor)  ;
+		background-color: var(--accentColor) ;
+		border-color:var(--accentColor) ;
+	}
+	&:hover{
+		color: var(--btnColor)  ;
+		background-color: var(--accentColorHover) ;
+		border-color:var(--accentColorHover) ;	
+	}	
+}

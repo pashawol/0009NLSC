@@ -25,41 +25,50 @@
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: var(--bs-primary);
 		--swiperBgDef: #ffffff;
-	
+
+
+			--accentColor: #{$warning};
+			--btnColor: #{$body-color};
+			--accentColorHover: #{lighten($color: $warning, $amount: 5)};
+			--accentColorActive: #{darken($color: $warning, $amount: 5)};
+			--titleColor: #333333;
+			--textColor1: #{ $primary};
+			--textColor2: #{ $danger};
+			// --accentColor: #00829F;
+			--bg: url("data:image/svg+xml,%3Csvg width='1920' height='1287' viewBox='0 0 1920 1287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1287L1190.5 1205.5L1920 1287L0 0V1287Z' fill='#{$warning}'/%3E%3Cpath d='M0 1287H976L0 0V1287Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 
-@include media-breakpoint-up(xl) {}
+body.theme-yellow {
+	--bg: url("data:image/svg+xml,%3Csvg width='1920' height='1287' viewBox='0 0 1920 1287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1190.73 1205.02L1918.02 1286.28L3.8373 3.17407L1190.73 1205.02Z' stroke='%23B82636'/%3E%3C/svg%3E%0A");
+}
+body.theme-blue-yellow {
+		--accentColor: #{$primary};
+		--accentColorHover: #{lighten($color: $primary, $amount: 5)};
+		--accentColorActive: #{darken($color: $primary, $amount: 5)};
+		--titleColor: #fff;
+			--btnColor: #{$white};
+		// --textColor1: #{ $primary};
+		// --textColor2: #{ $danger};
+	--bg: url("data:image/svg+xml,%3Csvg width='1920' height='1287' viewBox='0 0 1920 1287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1287L1190.5 1205.5L1920 1287L0 0V1287Z' fill='%23EEB125'/%3E%3Cpath d='M0 1287H976L0 0V1287Z' fill='white'/%3E%3C/svg%3E%0A");
+}
 
-@include media-breakpoint-up(lg) {}
-
-@include media-breakpoint-up(md) {}
-
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(xs) {}
-
-//
-@include media-breakpoint-between(md, xl) {}
-
-
-//
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-//
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+body.theme-red {
+		--accentColor: #{$danger};
+		--accentColorHover: #{lighten($color: $danger, $amount: 5)};
+		--accentColorActive: #{darken($color: $danger, $amount: 5)};
+		--titleColor: #{$primary};
+			--btnColor: #{$white};
+		--textColor1: #{ $warning};
+		// --textColor2: #{ $danger};
+	--bg: url("data:image/svg+xml,%3Csvg width='1920' height='1287' viewBox='0 0 1920 1287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1287L1190.5 1205.5L1920 1287L0 0V1287Z' fill='#{#ECECEC}'/%3E%3Cpath d='M0 1287H976L0 0V1287Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+body.theme-blue {
+	--accentColor: #{$primary};
+	--accentColorHover: #{lighten($color: $primary, $amount: 5)};
+	--accentColorActive: #{darken($color: $primary, $amount: 5)};
+	--titleColor: #{$white};
+	--btnColor: #{$white};
+	--textColor1: #{ $warning};
+	// --textColor2: #{ $danger};
+	--bg: url("data:image/svg+xml,%3Csvg width='1920' height='1287' viewBox='0 0 1920 1287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1287L1190.5 1205.5L1920 1287L0 0V1287Z' fill='#{$primary}'/%3E%3Cpath d='M0 1287H976L0 0V1287Z' fill='white'/%3E%3C/svg%3E%0A");
+}

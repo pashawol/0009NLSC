@@ -28,18 +28,18 @@
 			z-index: 2;
 			&::before{
 				content: '';
-				background-image: url(../img/svg/sCompetencies.svg);
+				background-image: var(--bg);
 				background-size: cover;
 				background-repeat: no-repeat;
 				position: absolute;
 				bottom: -50px;
 					@include media-breakpoint-up(xl) {
 
-						left: -380px;
+						// left: -380px;
 					}
 						@include media-breakpoint-up(lg) {
 
-							left: -480px;
+							left: -360px;
 						}
 						left: -780px;
 				z-index: -1;
@@ -54,7 +54,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
-				color: #ffffff;
+				color: var(--titleColor);
 			}
 			// padding-left: rem(20);
 			// padding-right: rem(20);
@@ -79,7 +79,7 @@
 				@extend .h6;
 				font-weight: bold;
 				color: #ffffff;
-				background-color: $primary;
+				background-color: var(--textColor1);
 				height: 100%;
 				@include media-breakpoint-up(lg) {
 
@@ -103,7 +103,7 @@
 				&:nth-child(8), 
 				&:nth-child(9) 
 				{
-					background-color: $danger; 
+					background-color: var(--textColor2);
 				}
 				@include media-breakpoint-up(xl) {
 					&:nth-child(3) { 

@@ -15,14 +15,14 @@ mixin mob-mnu()
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav(l) 
+mixin top-nav(l, i='logo.svg') 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			.row
 				.col-lg-auto.col
 					+e.logo(href="/")
-						img(src="img/svg/logo.svg", alt="")
+						img(src=`img/svg/${i}`, alt="")
 
 				.col-auto.order-lg-last
 					+soc()

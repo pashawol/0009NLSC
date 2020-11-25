@@ -1,13 +1,13 @@
-mixin headerBlock()
+mixin headerBlock(t=`Всероссийский Слёт Национальной лиги студенческих клубов`, p=`Слёт НЛСК является площадкой для укрепления горизонтальных связей между студенческими клубами. `)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			+e.block
 				//- +pic('head-img.png')(class="")
-				img.img( src="img/@2x/head-img.png", alt="")
-				+e.date 21-27 сентября&nbsp;г. Казань
-				h1 Всероссийский Слёт Национальной лиги студенческих клубов
-				p Слёт НЛСК является площадкой для укрепления горизонтальных связей между студенческими клубами. 
+				img.img(src="img/@2x/head-img.png", alt="")
+				+e.date  10-15 ноября 2020 г.
+				h1!= t
+				p!= p
 				.row
 					.col-auto
 						+e.link(href="#") #НЛСК    
@@ -18,7 +18,7 @@ mixin headerBlock()
 			+e.row.row
 				.col-md-6
 					+e.inner
-						img.res-i(src="img/svg/team.svg" loading="lazy", alt="")
+						img.res-i(src="img/svg/team.svg", alt="", loading="lazy")
 						.h1.strong.ttu Участники
 				.col-md-6
 					+e.footer

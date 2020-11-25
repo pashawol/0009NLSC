@@ -30,10 +30,10 @@
 	&__logo { 
 		@include media-breakpoint-up(xl) {
 		 img{  
-			 width: rem(145);
-			 margin-top: rem(-70);
-			 position: relative;
-			 top: rem(105);
+			//  width: rem(145);
+			//  margin-top: rem(-70);
+			//  position: relative;
+			//  top: rem(105);
 		 }
 		 }
 		}
@@ -63,7 +63,7 @@
 			top: rem(-214);
 			transform: rotate(-8deg);
 			transform-origin: right top;
-			background-color: $warning;
+			background-color: var(--accentColor);
 			width: rem(1960);
 			height: rem(214);
 		}
